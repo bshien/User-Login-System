@@ -1,0 +1,36 @@
+
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Set New Password</h1>
+        <%- include ("./partials/messages"); %>
+        <form action="/users/reset/<%= token %>" method="POST">
+            <div class="form-group">
+                <label for="password">New Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Create Password"
+                  value="<%= typeof password != 'undefined' ? password : '' %>"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  class="form-control"
+                  placeholder="Confirm Password"
+                  value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Confirm</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
