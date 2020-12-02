@@ -7,20 +7,21 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 //const sesTransport = require('nodemailer-ses-transport');
 var AWS = require('aws-sdk');
-require('dotenv').config();
+// require('dotenv').config();
 
 // const SESCREDENTIALS = {
 //   accessKeyId : process.env.ID ,
 //   secretAccessKey : process.env.SECRET
 // };
 
-console.log('region: ', process.env.REGION);
+// console.log('region: ', process.env.REGION);
 
  // configure AWS SDK
  AWS.config.update({
   // accessKeyId: SESCREDENTIALS.accessKeyID,
   // secretAccessKey: SESCREDENTIALS.secretAccessKey,
-  region: process.env.REGION,
+  // region: process.env.REGION,
+  region: "us-west-2",
   "Statement": [
     {
         "Effect": "Allow",
